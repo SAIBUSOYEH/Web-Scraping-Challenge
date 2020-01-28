@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+​
 <head>
     <meta charset="UTF-8">
     <meta name ="viewport" content ="width=device-width", initial-scale=1.0">
@@ -18,31 +18,30 @@
         <div class="row" id="mars-news">
           <div class="col-md-12">
               <h3>Latest Mars News</h3>
-                <h4>{{News_title}}</h4>
-                    <p>{{News_paragraph}}</p>
+                <h4>{{mars.news_title}}</h4>
+                    <p>{{mars.news_paragraph}}</p>
           </div>
         </div>
-        <div class ="row" id="mars-image">
-            <div class = "col-md-8">
+        <div class="row" id="mars-image">
+            <div class="col-md-8">
                 <h3>Featured Mars Image</h3>
-                <img src = "{{featured_image}}" alt ="Mars Image">
+                <img class="img-responsive" src="{{mars.featured_image}}" alt="Mars Image">
             </div>
             <div class = "col-md-4">
                     <h4>Current Weather on Mars</h4>
-                    <p>{{mars_weather}}</p>
+                    <p>{{mars.mars_weather}}</p>
                     <br>
-                    <h4>Nasa Mars Latest</h4>
-                    <p>{{mars_facts_table}}</p>
-                </div>
+                    <h4>Nasa Mars Latest</h4></div>
+                    {{mars.mars_facts_table}}
         </div>
         
         <div class ="row" id="mars-hemispheres">
             <div class = "col-md-12">
                 <h3><center>Mars Hemispheres</center></h3>
-                {% for hemisphere in mars.mars_hemisphere %}
+                {% for hemisphere in mars.hemisphere_img_url %}
                     <div class = "col-md-6">
                         <div class = "thumbnail">
-                            <img src = "{{hemisphere_img_url}}">
+                            <img src = "{{hemisphere.img_url}}">
                                 <h3>{{hemisphere.title}}</h3>
                             </div>
                         </div>
@@ -56,4 +55,3 @@
       </div>
 </body>
 </html>
-© 2019 GitHub, Inc.
