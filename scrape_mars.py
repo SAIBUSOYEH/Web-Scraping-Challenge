@@ -44,8 +44,8 @@ def scrape():
     browser.visit(weather_url)
     soup = bs(browser.html, "html.parser")
     #temp = soup.find('div', attrs={"class": "tweet", "data-name": "Mars Weather"})
-    mars_weather = soup.find("p", class_="TweetTextSize TweetTextSize--normal js-tweet-text tweet-text").text
-    mars_facts_data["mars_weather"] = mars_weather
+    #mars_weather = soup.find("p", class_="TweetTextSize TweetTextSize--normal js-tweet-text tweet-text").text
+    #mars_facts_data["mars_weather"] = mars_weather
     # #### Mars Facts
     facts_url = "https://space-facts.com/mars/"
     browser.visit(facts_url)
